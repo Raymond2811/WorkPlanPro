@@ -21,7 +21,26 @@ $(document).ready(function (){
     });
   }
 
+  function loadEvents(){
+    $('.time-block').each(function(){
+      const eventId = $(this).attr('id');
+      const savedEvent = localStorage.getItem(eventId);
+
+      if (savedEvent){
+        $(this).find('textarea').val(savedEvent);
+      }
+
+    });
+  }
+
+  $('.saveBtn').on('click', function(){
+    const eventId = $(this).parent().attr('id');
+    const eventText = $(this).siblings('textarea').val();
+    localStorage.setItem(eventId,eventText);
+  });
+
   updateBlockColors();
+  loadEvents();
   setInterval(updateBlockColors, 60000);
 });
 
