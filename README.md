@@ -11,6 +11,8 @@ https://raymond2811.github.io/WorkPlanPro/
 
 This website is user-friendly. All you need to do is enter your events or to-do items and click the blue 'Save' button on the right.
 
+![alt text](assets/images/work-day-scheduler.png)
+
 ## License
 
 MIT License
